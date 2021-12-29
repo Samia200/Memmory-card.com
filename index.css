@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 80px;
+    width: 80px;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;    
+}
+.head{
+    color: white;
+    letter-spacing: 3px;
+    top: 10px;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.527);
+    border-radius: 9px;
+    border: 2px solid #a6a6a6;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: grid;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+}
+.score{
+    margin-left: 25%;
+}
+.container{
+    top: 30px;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+}
+.cell div{
+    height: 100px;
+    border-radius: 8px;
+}
+.cell{
+
+   position: relative; 
+   cursor: pointer;
+   left: 15px;
+}
+.front{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #a6a6a6;
+    background-color: #dec9e9;
+    transform: rotateY(90deg);
+}
+.flip{
+    transform: rotateY(0deg);
+
+}
+.match{
+    transform: rotateY(0deg);
+
+}
+.show{
+    transform: rotateY(0deg);
+}
+.back{
+    background-color: rgb(87, 88, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+@media screen and (max-width:482px) {
+    .head{
+        height: 60px;
+        top: 0;
+    }
+    .container{
+        top: 10px;
+        grid-template-columns: repeat(2, auto);
+         height: 86vh;
+        max-width: 630px;
+    }
+    .cell div{
+        height: 50px;
+    }
+    .cell{
+        left: 0;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    .front{
+        height: 50%;
+    width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
